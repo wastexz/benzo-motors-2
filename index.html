@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BENZO MOTORS | Инструменты доминирования</title>
+    <title>BENZO MOTORS | Твой актив доминирования</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
@@ -27,7 +27,6 @@
             overflow-x: hidden;
         }
 
-        /* --- Header --- */
         header {
             padding: 25px 5%;
             display: flex;
@@ -57,9 +56,9 @@
 
         nav a:hover { color: var(--gold); }
 
-        /* --- Hero --- */
+        /* --- Hero Section --- */
         .hero {
-            height: 90vh;
+            height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -67,6 +66,15 @@
             text-align: center;
             padding: 0 5%;
             background: radial-gradient(circle at 50% 50%, rgba(0, 255, 65, 0.08) 0%, transparent 60%);
+        }
+
+        .hero p.tagline {
+            color: var(--emerald);
+            letter-spacing: 5px;
+            margin-bottom: 20px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
         }
 
         .hero h1 {
@@ -87,42 +95,16 @@
 
         @keyframes shine { to { background-position: 200% center; } }
 
-        /* --- Manifesto Section (НОВЫЙ) --- */
-        .manifesto {
-            padding: 120px 10%;
-            background: #080808;
-            border-top: 1px solid rgba(255,255,255,0.03);
-            border-bottom: 1px solid rgba(255,255,255,0.03);
-            text-align: center;
-            position: relative;
+        .hero .main-description {
+            max-width: 800px;
+            color: #fff;
+            font-size: 1.1rem;
+            line-height: 1.5;
+            background: rgba(0, 80, 255, 0.1); /* Легкий синий бэкграунд как на скриншоте при выделении */
+            padding: 5px;
         }
 
-        .manifesto-content { max-width: 900px; margin: 0 auto; }
-        
-        .manifesto h2 {
-            font-family: 'Syne', sans-serif;
-            font-size: clamp(1.5rem, 4vw, 3rem);
-            margin-bottom: 40px;
-            line-height: 1.2;
-        }
-
-        .manifesto p {
-            font-size: 1.2rem;
-            color: var(--text-dim);
-            line-height: 1.8;
-            font-weight: 300;
-        }
-
-        .manifesto .highlight {
-            color: var(--gold);
-            font-weight: 700;
-            display: block;
-            margin-top: 20px;
-            font-family: 'Syne', sans-serif;
-            letter-spacing: 2px;
-        }
-
-        /* --- Grid --- */
+        /* --- Grid Section --- */
         .section-label { padding: 80px 5% 40px; text-align: left; }
         .section-label h2 { font-family: 'Syne', sans-serif; font-size: 2.5rem; text-transform: uppercase; }
         .section-label p { color: var(--emerald); font-weight: 700; letter-spacing: 2px; text-transform: uppercase; font-size: 0.7rem; }
@@ -191,6 +173,17 @@
             z-index: 10;
         }
 
+        /* --- Manifesto --- */
+        .manifesto {
+            padding: 100px 10%;
+            background: #080808;
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.03);
+        }
+
+        .manifesto h2 { font-family: 'Syne', sans-serif; font-size: 2.5rem; margin-bottom: 30px; }
+        .manifesto p { color: var(--text-dim); line-height: 1.8; max-width: 800px; margin: 0 auto; }
+
         /* --- Footer --- */
         footer {
             padding: 100px 5% 50px;
@@ -198,16 +191,7 @@
             background: #000;
         }
 
-        .footer-logo { font-family: 'Syne', sans-serif; font-size: clamp(3rem, 15vw, 10rem); opacity: 0.05; margin-bottom: 40px; display: block; width: 100%; }
-
-        .footer-tagline {
-            max-width: 700px;
-            margin: 0 auto 40px;
-            color: var(--text-dim);
-            font-size: 0.9rem;
-            letter-spacing: 1px;
-            line-height: 1.6;
-        }
+        .footer-logo { font-family: 'Syne', sans-serif; font-size: clamp(3rem, 15vw, 10rem); opacity: 0.05; margin-bottom: 20px; display: block; }
 
         @media (max-width: 768px) {
             .cars-grid { grid-template-columns: 1fr; }
@@ -220,7 +204,7 @@
     <header>
         <div class="logo">BENZO<span>MOTORS</span></div>
         <nav>
-            <a href="#">Коллекция</a>
+            <a href="#collection">Коллекция</a>
             <a href="#">Сервис</a>
             <a href="#">Аукционы</a>
             <a href="#">Контакты</a>
@@ -228,20 +212,19 @@
     </header>
 
     <section class="hero">
-        <p style="color: var(--emerald); letter-spacing: 5px; margin-bottom: 15px; font-size: 0.8rem; font-weight: 700;">NEW MONEY COLLECTIVE</p>
-        <h1>Ваш успех <span>можно потрогать.</span></h1>
-        <p style="max-width: 600px; color: var(--text-dim); font-size: 0.9rem;">
-            Benzo Motors — это не просто автомобили. Это материальное воплощение ваших амбиций и трофеи, которые заявляют о вашем статусе громче любых слов.
+        <p class="tagline">NEW MONEY COLLECTIVE</p>
+        <h1>ТВОЙ АКТИВ <span>ДОМИНИРОВАНИЯ.</span></h1>
+        <p class="main-description">
+            Мы не продаем машины. Мы обеспечиваем статус, который невозможно игнорировать. Лучшие гиперкары мира в наличии в Benzo Motors.
         </p>
     </section>
 
-    <div class="section-label">
+    <div class="section-label" id="collection">
         <p>Current Inventory</p>
         <h2>Флот в наличии</h2>
     </div>
 
     <section class="cars-grid">
-        <!-- Машина 1 -->
         <div class="car-card">
             <div class="car-img" style="background-image: url('https://images.unsplash.com/photo-1544636331-e26879cd4d9b?auto=format&fit=crop&q=80&w=1000');"></div>
             <h3>Ferrari SF90 Stradale</h3>
@@ -253,7 +236,6 @@
             <div class="price">$650,000</div>
         </div>
 
-        <!-- Машина 2 -->
         <div class="car-card">
             <div class="car-img" style="background-image: url('https://images.unsplash.com/photo-1631214499520-7a182641157d?auto=format&fit=crop&q=80&w=1000');"></div>
             <h3>Rolls-Royce Spectre</h3>
@@ -265,7 +247,6 @@
             <div class="price">$520,000</div>
         </div>
 
-        <!-- Машина 3 -->
         <div class="car-card">
             <div class="car-img" style="background-image: url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&q=80&w=1000');"></div>
             <h3>Porsche 911 GT3 RS</h3>
@@ -277,7 +258,6 @@
             <div class="price">$380,000</div>
         </div>
 
-        <!-- Машина 4 -->
         <div class="car-card">
             <div class="car-img" style="background-image: url('https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&q=80&w=1000');"></div>
             <h3>Lamborghini Revuelto</h3>
@@ -289,7 +269,6 @@
             <div class="price">$890,000</div>
         </div>
 
-        <!-- Машина 5 -->
         <div class="car-card">
             <div class="sold-tag">Sold / Продано</div>
             <div class="car-img" style="background-image: url('https://images.unsplash.com/photo-1627454819213-f7720a0e2d24?auto=format&fit=crop&q=80&w=1000');"></div>
@@ -302,7 +281,6 @@
             <div class="price" style="color: var(--text-dim); text-decoration: line-through;">$450,000</div>
         </div>
 
-        <!-- Машина 6 -->
         <div class="car-card">
             <div class="car-img" style="background-image: url('https://images.unsplash.com/photo-1600706432502-77a0e2e32770?auto=format&fit=crop&q=80&w=1000');"></div>
             <h3>Bugatti Chiron Pur Sport</h3>
@@ -315,29 +293,14 @@
         </div>
     </section>
 
-    <!-- НОВЫЙ БЛОК: МАНИФЕСТ -->
     <section class="manifesto">
-        <div class="manifesto-content">
-            <h2>Мы не просто продаем машины. Мы создаем новую реальность для тех, кто привык побеждать.</h2>
-            <p>
-                В Benzo Motors мы понимаем: для 1% избранных автомобиль — это не средство передвижения. Это манифест силы, инструмент влияния и актив, который работает на вашу репутацию 24/7. 
-            </p>
-            <p style="margin-top: 20px;">
-                Мы обеспечиваем уровень доминирования на дороге, который невозможно игнорировать. Наши клиенты не ждут очереди. Они диктуют условия.
-            </p>
-            <span class="highlight">БЕСКОМПРОМИССНО. ДОРОГО. НАВСЕГДА.</span>
-        </div>
+        <h2>Манифест превосходства</h2>
+        <p>Мы создаем реальность для тех, кто не привык проигрывать. Каждый автомобиль в коллекции Benzo Motors — это не просто металл, это инструмент вашего влияния.</p>
     </section>
 
     <footer>
         <span class="footer-logo">BENZO MOTORS</span>
-        <div class="footer-tagline">
-            ESTABLISHED FOR THE 1%. 2024. <br>
-            Лучшие гиперкары мира в наличии. Ваш статус — наша ответственность.
-        </div>
-        <p style="color: var(--emerald); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 3px; font-weight: 900;">
-            NO REFUNDS FOR SLOW DRIVERS.
-        </p>
+        <p style="color: var(--emerald); font-weight: 900; letter-spacing: 3px;">NO REFUNDS FOR SLOW DRIVERS.</p>
     </footer>
 
 </body>
